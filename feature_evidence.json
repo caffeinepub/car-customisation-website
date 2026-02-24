@@ -1,0 +1,89 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-car-customisation-ui-with-a-live-preview-panel-and-a-controls-sidebar-the-preview-panel-should-display-the-customised-car-rendered-in-3d-using-three-js-react-three-fiber-the-controls-sidebar-should-allow-the-user-to-select-car-model-at-least-3-options-body-color-color-picker-wheel-style-at-least-3-options-and-interior-color-color-picker",
+      "featureTitle": "Build a car customisation UI with a live preview panel and a controls sidebar. The preview panel should display the customised car rendered in 3D using Three.js/React Three Fiber. The controls sidebar should allow the user to select: car model (at least 3 options), body color (color picker), wheel style (at least 3 options), and interior color (color picker).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CarPreview3D.tsx",
+        "frontend/src/components/CustomizationControls.tsx",
+        "frontend/src/pages/CarCustomizer.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-save-configuration-button-that-persists-the-current-customisation-state-to-the-backend-add-a-load-my-configuration-button-that-retrieves-and-applies-the-user-s-last-saved-configuration",
+      "featureTitle": "Add a 'Save Configuration' button that persists the current customisation state to the backend. Add a 'Load My Configuration' button that retrieves and applies the user's last saved configuration.",
+      "files": [
+        "frontend/src/components/ConfigurationActions.tsx",
+        "frontend/src/pages/CarCustomizer.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-sleek-dark-automotive-showroom-visual-theme-throughout-the-site-use-a-dark-charcoal-and-matte-black-background-palette-with-metallic-silver-and-amber-accent-colors-use-bold-modern-sans-serif-typography-the-layout-should-feel-like-a-premium-car-configurator-minimal-chrome-high-contrast-ui-spotlight-style-lighting-on-the-3d-model-preview-enforce-this-theme-consistently-across-all-pages-and-components",
+      "featureTitle": "Apply a sleek, dark automotive showroom visual theme throughout the site. Use a dark charcoal and matte black background palette with metallic silver and amber accent colors. Use bold, modern sans-serif typography. The layout should feel like a premium car configurator — minimal chrome, high contrast UI, spotlight-style lighting on the 3D model preview. Enforce this theme consistently across all pages and components.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/CarPreview3D.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-generated-hero-branding-image-car-showroom-hero-dim-1920x600-png-as-a-static-asset-in-the-header-or-landing-section-of-the-website",
+      "featureTitle": "Render the generated hero/branding image (car-showroom-hero.dim_1920x600.png) as a static asset in the header or landing section of the website.",
+      "files": [
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "kind": "build_request",
+  "title": "Car Customisation Website",
+  "projectName": "CarForge",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend actor that stores car customisation configurations, including fields for: car model, body color, wheel style, interior color, and any additional accessories. Expose functions to save, retrieve, and list configurations by user.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Build me car customisation website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Actor exposes a saveConfig function that stores a car configuration with all listed fields.",
+        "Actor exposes a getMyConfig function that returns the saved configuration for the calling principal.",
+        "Actor exposes a listConfigs function that returns all saved configurations.",
+        "Data persists across canister upgrades using stable storage."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a car customisation UI with a live preview panel and a controls sidebar. The preview panel should display the customised car rendered in 3D using Three.js/React Three Fiber. The controls sidebar should allow the user to select: car model (at least 3 options), body color (color picker), wheel style (at least 3 options), and interior color (color picker).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Build me car customisation website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 3D car model is rendered in the preview panel and updates in real-time as options are changed.",
+        "User can select from at least 3 car model variants.",
+        "User can pick a body color via a color picker and see it applied to the 3D model.",
+        "User can select from at least 3 wheel styles.",
+        "User can pick an interior color via a color picker.",
+        "All changes are reflected immediately in the 3D preview without a page reload."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a 'Save Configuration' button that persists the current customisation state to the backend. Add a 'Load My Configuration' button that retrieves and applies the user's last saved configuration.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Build me car customisation website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking 'Save Configuration' calls the backend saveConfig function and shows a success notification.",
+        "Clicking 'Load My Configuration' fetches and applies the saved configuration to the UI and 3D preview.",
+        "Error states are handled gracefully with user-facing messages."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a sleek, dark automotive showroom visual theme throughout the site. Use a dark charcoal and matte black background palette with metallic silver and amber accent colors. Use bold, modern sans-serif typography. The layout should feel like a premium car configurator — minimal chrome, high contrast UI, spotlight-style lighting on the 3D model preview. Enforce this theme consistently across all pages and components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The overall color scheme uses dark charcoal/matte black backgrounds with metallic silver and amber accents.",
+        "Typography uses a bold, modern sans-serif font.",
+        "The 3D preview area has a spotlight or stage-light aesthetic.",
+        "The theme is applied consistently across the customisation page, header, and any navigation elements."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Render the generated hero/branding image (car-showroom-hero.dim_1920x600.png) as a static asset in the header or landing section of the website.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The hero image is loaded from frontend/public/assets/generated/car-showroom-hero.dim_1920x600.png.",
+        "The image displays correctly in the header or top section of the page."
+      ]
+    }
+  ],
+  "constraints": [
+    "All backend logic must reside in a single Motoko actor in backend/main.mo.",
+    "Do not edit any files listed in frontend.immutablePaths.",
+    "Generated images must be served as static assets from frontend/public/assets/generated, not through the backend."
+  ],
+  "nonGoals": [
+    "Real-money payment or e-commerce checkout.",
+    "User authentication beyond Internet Identity.",
+    "Multi-player or shared configuration sessions.",
+    "Actual vehicle ordering or dealer integration.",
+    "Mobile app or React Native version."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Dark automotive showroom hero banner with dramatic spotlight lighting on a sleek modern sports car silhouette, metallic silver and amber accent tones, wide cinematic crop (car-showroom-hero.dim_1920x600.png)"
+    ],
+    "edits": []
+  }
+}

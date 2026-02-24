@@ -1,0 +1,13 @@
+{
+  "frontend/src/index.css": "Global CSS with dark automotive showroom theme using OKLCH color tokens, Rajdhani display font, amber/silver/charcoal palette, and custom utility classes for glow effects and glass panels.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Rajdhani/Inter fonts, custom amber/silver/charcoal/matte-black color tokens, amber glow shadows, and shimmer animations for the automotive theme.",
+  "frontend/src/App.tsx": "Root app component with TanStack Router (home and /customize routes), dark ThemeProvider, and Sonner Toaster with dark styling.",
+  "frontend/src/components/Layout.tsx": "Full-page layout with dark automotive header (CarForge logo, nav links, auth button), main content outlet, and footer with caffeine.ai attribution.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page with hero image section, gradient overlays, feature cards (3D preview, customization, save/load), and CTA section linking to the configurator.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for user profile (get/save) and car configuration (get/save) with proper actor dependency and cache invalidation.",
+  "frontend/src/pages/CarCustomizer.tsx": "Main configurator page managing car config state, wiring 3D preview and controls sidebar, handling save/load with backend integration and toast notifications.",
+  "frontend/src/components/CarPreview3D.tsx": "React Three Fiber 3D car preview with procedural geometry for 5 car models, dynamic body/interior colors, wheel style variants, showroom spotlights, contact shadows, and orbit controls.",
+  "frontend/src/components/CustomizationControls.tsx": "Sidebar controls for model selection, body color swatches + custom picker, wheel style grid, interior color swatches + custom picker, and accessories toggles.",
+  "frontend/src/components/ConfigurationActions.tsx": "Save/Load action buttons with loading spinners; shows login prompt when unauthenticated.",
+  "frontend/src/components/ProfileSetupModal.tsx": "First-login modal dialog for setting up a driver profile name, with form validation and toast feedback."
+}

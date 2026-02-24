@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Car customisation website where users can customize cars visually.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Dark automotive showroom hero banner with dramatic spotlight lighting on a sleek modern sports car silhouette, metallic silver and amber accent tones, wide cinematic crop (car-showroom-hero.dim_1920x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-car-customisation-ui-with-a-live-preview-panel-and-a-controls-sidebar-the-preview-panel-should-display-the-customised-car-rendered-in-3d-using-three-js-react-three-fiber-the-controls-sidebar-should-allow-the-user-to-select-car-model-at-least-3-options-body-color-color-picker-wheel-style-at-least-3-options-and-interior-color-color-picker",
+      "title": "Build a car customisation UI with a live preview panel and a controls sidebar. The preview panel should display the customised car rendered in 3D using Three.js/React Three Fiber. The controls sidebar should allow the user to select: car model (at least 3 options), body color (color picker), wheel style (at least 3 options), and interior color (color picker).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-save-configuration-button-that-persists-the-current-customisation-state-to-the-backend-add-a-load-my-configuration-button-that-retrieves-and-applies-the-user-s-last-saved-configuration",
+      "title": "Add a 'Save Configuration' button that persists the current customisation state to the backend. Add a 'Load My Configuration' button that retrieves and applies the user's last saved configuration.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-sleek-dark-automotive-showroom-visual-theme-throughout-the-site-use-a-dark-charcoal-and-matte-black-background-palette-with-metallic-silver-and-amber-accent-colors-use-bold-modern-sans-serif-typography-the-layout-should-feel-like-a-premium-car-configurator-minimal-chrome-high-contrast-ui-spotlight-style-lighting-on-the-3d-model-preview-enforce-this-theme-consistently-across-all-pages-and-components",
+      "title": "Apply a sleek, dark automotive showroom visual theme throughout the site. Use a dark charcoal and matte black background palette with metallic silver and amber accent colors. Use bold, modern sans-serif typography. The layout should feel like a premium car configurator — minimal chrome, high contrast UI, spotlight-style lighting on the 3D model preview. Enforce this theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-generated-hero-branding-image-car-showroom-hero-dim-1920x600-png-as-a-static-asset-in-the-header-or-landing-section-of-the-website",
+      "title": "Render the generated hero/branding image (car-showroom-hero.dim_1920x600.png) as a static asset in the header or landing section of the website.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Car customisation website with visual car customization options",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend actor that stores car customisation configurations, including fields for: car model, body color, wheel style, interior color, and any additional accessories. Expose functions to save, retrieve, and list configurations by user.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Car Customisation Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

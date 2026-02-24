@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Main Motoko actor implementing user profile and car configuration storage with role-based access control (user/admin), exposing query and update endpoints for saving, retrieving, and listing profiles and car configurations.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (3D car customizer UI, save/load configuration, dark automotive theme, hero image) to their source files, components, and test IDs with confidence ratings.",
+  "frontend-file-summaries.txt": "JSON dictionary providing one-line summaries of each frontend source file, serving as a quick reference for the purpose and contents of every component, page, hook, and config file.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH-based CSS custom properties for light and dark color themes including background, foreground, card, sidebar, and chart tokens.",
+  "frontend/index.html": "Minimal HTML entry point that mounts the React app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that sets up TanStack Router with home and /customize routes wrapped in a dark ThemeProvider and a styled Sonner Toaster.",
+  "frontend/src/components/CarPreview3D.tsx": "React Three Fiber component rendering a procedurally built 3D car with model-specific dimensions, dynamic body/interior colors, wheel style variants, auto-rotation, and showroom lighting.",
+  "frontend/src/components/ConfigurationActions.tsx": "UI component rendering Save and Load buttons for authenticated users, or a Login prompt for unauthenticated users, with loading spinner states.",
+  "frontend/src/components/CustomizationControls.tsx": "Sidebar controls component providing model selection, body color swatches with custom picker, wheel style grid, interior color swatches, and accessories toggles for the car configurator.",
+  "frontend/src/components/Layout.tsx": "Main app layout component with a header containing navigation links, a logo, and an authentication button that handles Internet Identity login/logout.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog for first-time users to enter a driver name and create their profile, calling an onSave callback on submission.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an authenticated or anonymous ICP backend actor using React Query, invalidating dependent queries when the identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Custom hook and context provider that manages Internet Identity authentication state, exposing login/logout functions and identity status via AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching and mutating user profiles and car configurations against the ICP backend actor.",
+  "frontend/src/index.css": "Global CSS file defining a dark automotive-themed design system with custom OKLCH color tokens, Tailwind layers, and utility classes for amber glows and glass panels.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/CarCustomizer.tsx": "Main car customizer page that manages local configuration state, handles save/load of configurations to the ICP backend, and renders the 3D preview, controls, and profile setup modal.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page component featuring a hero section with a car showroom image, headline, and CTA button linking to the customizer, plus a features grid highlighting 3D preview, customization, and save/load capabilities.",
+  "frontend/src/utils/urlParams.ts": "Utility module providing functions to read URL query parameters (supporting both standard and hash-based routing), persist them to sessionStorage, and clean sensitive params from the URL hash without page reload.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining the dark automotive theme with custom fonts (Rajdhani, Inter), an extended color palette (amber, silver, charcoal, matte-black using OKLCH variables), custom border radii, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state manifest describing the car customisation website's existing features (3D configurator UI, save/load, dark theme, hero image) and pending feature requests (backend actor for storing configurations), along with schema version and architectural metadata."
+}

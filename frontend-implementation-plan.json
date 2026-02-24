@@ -1,0 +1,119 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "CarForge - Car Customisation Website Frontend",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Build a car customisation UI with live 3D preview and controls sidebar",
+      "acceptanceCriteria": [
+        "A 3D car model is rendered in the preview panel and updates in real-time as options are changed.",
+        "User can select from at least 3 car model variants.",
+        "User can pick a body color via a color picker and see it applied to the 3D model.",
+        "User can select from at least 3 wheel styles.",
+        "User can pick an interior color via a color picker.",
+        "All changes are reflected immediately in the 3D preview without a page reload."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CarCustomizer.tsx",
+          "operation": "create",
+          "description": "Create the main car customisation page with a 3D preview panel (using React Three Fiber) and a controls sidebar. The page manages customisation state (car model, body color, wheel style, interior color, accessories) and passes it to child components. Verify the authorization component's usage instructions before implementing to ensure proper authentication guards."
+        },
+        {
+          "path": "frontend/src/components/CarPreview3D.tsx",
+          "operation": "create",
+          "description": "Create a 3D car preview component using React Three Fiber and Three.js. This component receives customisation props (model, bodyColor, wheelStyle, interiorColor) and renders a 3D car model that updates in real-time. Implement at least 3 car model variants as separate geometries or GLTF models. Apply materials and colors dynamically based on props."
+        },
+        {
+          "path": "frontend/src/components/CustomizationControls.tsx",
+          "operation": "create",
+          "description": "Create a controls sidebar component with UI elements for selecting car model (dropdown with at least 3 options), body color (color picker), wheel style (dropdown with at least 3 options), and interior color (color picker). Emit onChange events to update parent state. Use shadcn/ui components for consistent styling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the /customize route for the CarCustomizer page in the application router. Ensure the route is accessible to authenticated users only by checking authentication state before rendering."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add Save and Load Configuration buttons with backend integration",
+      "acceptanceCriteria": [
+        "Clicking 'Save Configuration' calls the backend saveConfig function and shows a success notification.",
+        "Clicking 'Load My Configuration' fetches and applies the saved configuration to the UI and 3D preview.",
+        "Error states are handled gracefully with user-facing messages."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useCarConfiguration.ts",
+          "operation": "create",
+          "description": "Create a React Query hook that provides saveConfiguration (calling backend saveConfiguration) and loadMyConfiguration (calling backend getMyConfiguration) functions. Handle loading states, success notifications, and error states. Return mutation and query objects for use in components. Verify the authorization component's usage instructions before implementing to ensure proper error handling for unauthorized access."
+        },
+        {
+          "path": "frontend/src/pages/CarCustomizer.tsx",
+          "operation": "modify",
+          "description": "Add 'Save Configuration' and 'Load My Configuration' buttons to the CarCustomizer page. Wire them to the useCarConfiguration hook. Display success/error notifications using a toast or alert component. When loading a configuration, update the local customisation state and trigger a re-render of the 3D preview."
+        },
+        {
+          "path": "frontend/src/components/ConfigurationActions.tsx",
+          "operation": "create",
+          "description": "Create a component with Save and Load action buttons. Use shadcn/ui Button components. Display loading spinners during async operations and show success/error messages via toast notifications."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply sleek dark automotive showroom theme with metallic accents",
+      "acceptanceCriteria": [
+        "The overall color scheme uses dark charcoal/matte black backgrounds with metallic silver and amber accents.",
+        "Typography uses a bold, modern sans-serif font.",
+        "The 3D preview area has a spotlight or stage-light aesthetic.",
+        "The theme is applied consistently across the customisation page, header, and any navigation elements."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global CSS variables and base styles to implement the dark automotive showroom theme. Set background colors to dark charcoal (#1a1a1a) and matte black (#0a0a0a). Define accent colors for metallic silver (#c0c0c0) and amber (#ffbf00). Apply bold, modern sans-serif typography (e.g., 'Inter', 'Roboto', or system fonts). Ensure high contrast for UI elements."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration to include custom theme colors (charcoal, matte-black, metallic-silver, amber-accent) and typography settings. Add custom utility classes for the automotive showroom aesthetic if needed."
+        },
+        {
+          "path": "frontend/src/components/CarPreview3D.tsx",
+          "operation": "modify",
+          "description": "Add Three.js spotlight lighting to the 3D scene to create a stage-light or showroom spotlight effect on the car model. Use dark environment colors and configure camera/lighting to emphasize the premium configurator aesthetic."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a Layout component that wraps the application with a consistent header, navigation, and footer. Apply the dark showroom theme styling throughout. Include the generated hero image in the header section (see REQ-5)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap routed pages with the Layout component to ensure consistent theme application across all pages and navigation elements."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Render generated hero image as a static asset in the header",
+      "acceptanceCriteria": [
+        "The hero image is loaded from frontend/public/assets/generated/car-showroom-hero.dim_1920x600.png.",
+        "The image displays correctly in the header or top section of the page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add an <img> tag in the header section that loads the hero image from frontend/public/assets/generated/car-showroom-hero.dim_1920x600.png. Use responsive CSS to ensure the image scales correctly on different screen sizes. Apply dark overlay or gradient if needed to maintain text readability over the image."
+        }
+      ]
+    }
+  ]
+}
